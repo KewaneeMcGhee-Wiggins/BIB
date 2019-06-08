@@ -1,0 +1,23 @@
+{
+  "name": "breastisbest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KewaneeMcGhee-Wiggins/BIB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KewaneeMcGhee-Wiggins/BIB/issues"
+  },
+  "homepage": "https://github.com/KewaneeMcGhee-Wiggins/BIB#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.1"
+  }
+}
