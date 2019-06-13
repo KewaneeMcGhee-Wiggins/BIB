@@ -1,0 +1,23 @@
+
+   
+ h1 { 
+    background-color:rgb(192, 216, 112);
+    height: 50px; 
+    width:100 px;
+    border: 25px solid rgba(255, 0, 157, 0.418);
+    padding: 15px;
+    text-align: center;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     font-family: cursive;
+     font-stretch: expanded;
+     -webkit-text-fill-color: darkviolet
+ } 
+ .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+  }
+ 
