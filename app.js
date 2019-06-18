@@ -1,15 +1,16 @@
 const express = require('express');//modules
 const app = express();
 
-
-app.use('/html', express.static('html'));
+const data=[];
+//app.use('/html', express.static('html'));
+app.use(express.static('public'));
 
 
 app.get('/', (req, res) => res.render('index.ejs'));//Homepage route
 // or (req, res) => res.render('reservation.ejs')
 app.get('/newMember',(req, res) => res.render('clients.ejs'));
 // MAIN POST ROUTE
- //app.post('/clients', (req, res)=>res.send('index.ejs'));
+ app.post('/clients', (req, res)=>res.send('index.ejs'));
  
  //.......for form
  // console.log(req.body.firstN)
