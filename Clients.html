@@ -3,31 +3,103 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, i nitial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <!DOCTYPE html>
-    <html lang="en">
+    <link rel="stylesheet" href="styles.css">
+    <title>Clients</title>
+</head>
+<div class="topnav">
+<a href="about.html">About/Testimony</a>
+<a href="map.html">Map-Service Areas</a>
+<a href="donators.html">Donator Intake Form</a>
+<a href="clientReviews.html">Client Reviews</a>
+<a href="faQ.html">FAQ'S</a>
+</div>
+<h1>Client Intake Form</h1>
+<div class="centerText">
+<body>    
+ <p> A mother’s own breast milk is nearly always baby’s best first food; however, it is sometimes not available. In such cases, according to the American Academy of Pediatrics, the US Surgeon General, the World Health Organization, and others, safely pasteurized donor human milk is the next best option.</h3> </p>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, i nitial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <title>Clients</title>
-    </head>
-    <a href="about.html">About/Testimony</a>
-    <a href="donators.html">Donator Intake Form</a>
-    <a href="clientReviews">Client Reviews</a>
-<body>
-    <a href="https://www.healthychildren.org/English/ages-stages/baby/breastfeeding/Pages/Common-Myths-About-Breastfeeding.aspx">Common
+        <h3> Reasons to Receive</h3> 
+        Donor milk can be used as a temporary bridge until mother’s own milk comes in, or longer term as needed.  
+            
+         <h2> A baby might need donor milk for many reasons, including:</h2>
+          <ul>
+           <li> low milk supply</li>
+            <li>preterm birth</li>
+           <li>failure to thrive</li>
+            <li>weight loss</li>
+            <li>malabsorption syndromes</li>
+            <li>feeding/formula intolerance</li>
+            <li>immunologic deficiencies</li>
+            <li>pre- or post-operative nutrition</li>
+            <li>low blood sugar</li>
+            <li>high bilirubin levels</li>
+            <li>baby’s inability to latch</li>
+           <li>cleft/lip palate</li>
+            <li>tongue/lip tie</li>
+           <li>maternal health complications</li>
+           <li>“bridge” milk to supplement baby until mother can feed</li>
+           <li> adoption</li></p>
+    </ul>
+    <a href="https://www.healthychildren.org/English/ages-stages/baby/breastfeeding/Pages/Common-Myths-About-Breastfeeding.aspx" target="_blank">Common
         Myths About Breast Feeding</a>
+
+           <h2>Becoming a member</h2>  <div>
+            <%=  <form method="POST" action="/clients"> %>
+              <label for="firstN">First Name:
+                   <input type="text" name="firstName"><br>
+              </label>
+              <label for="lastN">Last Name:
+                   <input type="text" name="lastName"><br>
+              </label>
+              <label for="birthDate">D.O.B:
+                   <input type="date" name="dob"><br>
+              </label>
+              <address for="clientAddress">Address</address>
+              <input type="text" name="firstName"><br>
+              </label>
+              <label for="City">City:
+                   <input type="text" name="city"><br>
+              </label>
+              <label for="State">State:
+                   <input type="text" name="state"><br>
+              </label>
+              <label for="number">Zip Code:
+                   <input type="text" name="number"><br>
+         </label>
+         <label for="Telephone">Telephone 
+              <input type="number" name="telephone"><br>
+         </label>
+         <label for="email">Email: 
+              <input type="email" name="email"><br>
+         </label>
+         <label for="textarea"> 
+              <input type="text" name="question">What are the circumstances that lead you to BIB of Greater Boston?</textarea><br>
+         </label>
+         <button type="submit">Save</button> 
+              </form> %>
+         
+              <script src="app.js"></script>
+         </body>               
+
+
+ <button type="submit">Save</button> 
+                                
+                                 </div>
+                              </div>
+         
+
+
+                       
+ 
+               
 
 </body>
 
 
 
 <footer>
-<a href="index.html">Back To Homepage</a>
+    <a href="#index">Back To Homepage</a>
 </footer>
 </html>
