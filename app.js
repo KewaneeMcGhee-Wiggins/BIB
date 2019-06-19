@@ -4,11 +4,40 @@ const app = express();
 const data=[];
 //app.use('/html', express.static('html'));
 app.use(express.static('public'));
+app.set('view engine', 'ejs');
 
-
-app.get('/', (req, res) => res.render('index.ejs'));//Homepage route
+app.get('/', (req, res) =>{ res.render('index.ejs')});//Homepage route
 // or (req, res) => res.render('reservation.ejs')
-app.get('/newMember',(req, res) => res.render('clients.ejs'));
+
+app.get('/newMember',(req, res) =>{ 
+  res.render('clients.ejs')
+});
+
+app.get('/about', (req, res) => {
+  res.render('about.ejs')
+});
+
+app.get('/clients', (req, res) => {
+  res.render('clients.ejs')
+});
+
+app.get('/donators', (req, res) => {
+  res.render('donators.ejs')
+});
+
+app.get('/clientReviews', (req, res) => {
+  res.render('clientReviews.ejs')
+});
+
+app.get('/map', (req, res) => {
+  res.render('map.ejs')
+});
+
+app.get('/faQs', (req, res) => {
+  res.render('faQs.ejs')
+});
+
+
 // MAIN POST ROUTE
  app.post('/clients', (req, res)=>res.send('index.ejs'));
  
@@ -37,7 +66,7 @@ app.get('/newMember',(req, res) => res.render('clients.ejs'));
 
 //orders.push(clientObj)
  
-//res.redirect("/")
+//res.redirect("/index.ejs");
 //req.body.name
 
 
