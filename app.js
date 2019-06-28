@@ -3,7 +3,7 @@ const app = express();
 
 const data=[];
 //app.use('/html', express.static('html'));
-app.use(express.static('public'));
+app.use("/", express.static('public'));//route /
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) =>{ res.render('index.ejs')});//Homepage route
