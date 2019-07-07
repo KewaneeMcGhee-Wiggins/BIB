@@ -53,5 +53,16 @@ h1 {
     background-color: aqua;
     font-family: cursive;
   }
+form{
+  margin-top: 25px;
+  text-align:left;
+}
+form.btn{
+margin-top: 25px;
+}
+
+
+
+
 
   

@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, i nitial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <title>Clients</title>
-</head>
-
+  </head>
+<header><h1>Client Intake Form</h1></header>
 <body>
   <div class="topnav">
     <a href="about.html">About/Testimony</a>
@@ -17,7 +18,7 @@
     <a href="clientReviews.html">Client Reviews</a>
     <a href="faQ.html">FAQ'S</a>
   </div>
-  <h1>Client Intake Form</h1>
+  
   <div class="centerText">
 
 
@@ -89,6 +90,19 @@
         </label>
         <button type="submit">Save</button>
       </form>
+      
+        <% for(let i= 0; i< clients.length; i++) { %>
+          <div class="card-header">
+            Client <%= i + 1 %>
+            </div>
+            <div class="card-body">
+              <%= clients[i] %>
+              </div>
+              </div>
+              <% } %>
+      
+        
+        
 
       <script src="app.js"></script>
     </div>

@@ -1,38 +1,80 @@
 <%- include("./partials/header.ejs") %>
 <%- include("partials/navBar.ejs") %>
+<link rel="stylesheet" href="styles.css">
 
-<form method="POST" action="/clients">
-     <label for="firstN">First Name:
-          <input type="text" name="firstName"><br>
-     </label>
-     <label for="lastN">Last Name:
-          <input type="text" name="lastName"><br>
-     </label>
-     <label for="birthDate">D.O.B:
-          <input type="date" name="dob"><br>
-     </label>
-     <address for="clientAddress">Address</address>
-     <input type="text" name="clientAddress"><br>
-     </label>
-     <label for="City">City:
-          <input type="text" name="city"><br>
-     </label>
-     <label for="State">State:
-          <input type="text" name="state"><br>
-     </label>
-     <label for="Zip">Zip Code:
-          <input type="number" name="Zip"><br>
-     </label>
-     <label for="Telephone">Telephone
-          <input type="number" name="telephone"><br>
-     </label>
-     <label for="email">Email:
-          <input type="email" name="email"><br>
-     </label>
-     <label for="textarea">
-          <input type="text" name="question">What are the circumstances that lead you to BIB of Greater
-          Boston?</textarea><br>
-     </label>
-     <button type="submit">Save</button>
-</form>
 
+<div class="centerText">
+     <p> A mother’s own breast milk is nearly always baby’s best first food; however, it is sometimes not
+          available. In such cases, according to the American Academy of Pediatrics, the US Surgeon General, the
+          World Health Organization, and others, safely pasteurized donor human milk is the next best option.</h3>
+     </p>
+
+     <h3> Reasons to Receive</h3>
+     Donor milk can be used as a temporary bridge until mother’s own milk comes in, or longer term as needed.
+
+     <h2> A baby might need donor milk for many reasons, including:</h2>
+     <ul>
+          <li> low milk supply</li>
+          <li>preterm birth</li>
+          <li>failure to thrive</li>
+          <li>weight loss</li>
+          <li>malabsorption syndromes</li>
+          <li>feeding/formula intolerance</li>
+          <li>immunologic deficiencies</li>
+          <li>pre- or post-operative nutrition</li>
+          <li>low blood sugar</li>
+          <li>high bilirubin levels</li>
+          <li>baby’s inability to latch</li>
+          <li>cleft/lip palate</li>
+          <li>tongue/lip tie</li>
+          <li>maternal health complications</li>
+          <li>“bridge” milk to supplement baby until mother can feed</li>
+          <li> adoption</li>
+          </p>
+     </ul>
+     <a href="https://www.healthychildren.org/English/ages-stages/baby/breastfeeding/Pages/Common-Myths-About-Breastfeeding.aspx"
+          target="_blank">Common
+          Myths About Breast Feeding</a>
+          <div>
+            <img src= "https://www.womenshealth.gov/files/images/breastfeeding_guide-cover.png">
+          </div>
+
+     <h2>Becoming a member</h2>
+     <div class="centerText">
+          <form method="POST" action="/clients">
+               <label for="firstN">First Name:
+                    <input type="text" name="firstName"><br>
+               </label>
+               <label for="lastN">Last Name:
+                    <input type="text" name="lastName"><br>
+               </label>
+               <label for="birthDate">D.O.B:
+                    <input type="date" name="dob"><br>
+               </label>
+               <label for="clientAddress">Address:</address>
+                    <input type="text" name="clientAddress"><br>
+               </label>
+               <label for="City">City:
+                    <input type="text" name="city"><br>
+               </label>
+               <label for="State">State:
+                    <input type="text" name="state"><br>
+               </label>
+               <label for="Zip">Zip Code:
+                    <input type="number" name="Zip"><br>
+               </label>
+               <label for="Telephone">Telephone:
+                    <input type="number" name="telephone"><br>
+               </label>
+               <label for="email">Email:
+                    <input type="email" name="email"><br>
+               </label>
+
+               <label for="textarea">What are the circumstances that lead you to BIB of Greater Boston?
+                    <input type="text" name="question"><br>
+          </label>
+
+
+               <button type="submit">Save</button>
+
+          </form>

@@ -1,10 +1,15 @@
 const express = require('express');//modules
 const app = express();
+const bodyParser = require('body-parser');
 
 const data=[];
 //app.use('/html', express.static('html'));
 app.use("/", express.static('public'));//route /
+app.use(bodyParser.urlencoded({
+  extended:true
+}));
 app.set('view engine', 'ejs');
+
 
 app.get('/', (req, res) =>{ res.render('index.ejs')});//Homepage route
 // or (req, res) => res.render('reservation.ejs')
@@ -39,7 +44,12 @@ app.get('/faQs', (req, res) => {
 
 
 // MAIN POST ROUTE
- app.post('/clients', (req, res)=>res.send('index.ejs'));
+ //app.post('/clients', (req, res)=>res.send('index.ejs'));
+ app.post('/clients',(req, res)=>
+ {
+   ClientRectList.push(req.body.clients);
+   res.direct('/');
+ });
  
  //.......for form
  // console.log(req.body.firstN)
