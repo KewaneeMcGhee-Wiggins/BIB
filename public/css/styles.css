@@ -18,10 +18,9 @@ h1 {
     margin-right: auto;
     width: 25%;
   }
-  p.info{
-    text-align: left;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font:bold;
+  body.h1{
+    width:25px;
+    height: 25px;
   }
   body{
      background-color: rgb(245, 245, 220);
@@ -53,11 +52,6 @@ h1 {
     color: white;
   }
   
-  body.about{
-    text-align: center;
-    background-color: aqua;
-    font-family: cursive;
-  }
 form{
   margin-top: 25px;
   text-align:left;

@@ -2,6 +2,7 @@ const express = require('express');//modules
 const app = express();
 const bodyParser = require('body-parser');
 
+let ClientRectList =[];
 const data=[];
 //app.use('/html', express.static('html'));
 app.use("/", express.static('public'));//route /
@@ -47,8 +48,11 @@ app.get('/faQs', (req, res) => {
  //app.post('/clients', (req, res)=>res.send('index.ejs'));
  app.post('/clients',(req, res)=>
  {
-   ClientRectList.push(req.body.clients);
-   res.direct('/');
+   ClientRectList.push(req.body);
+   console.log(ClientRectList);
+  // console.log(req.body);
+  //  console.log(req.body.lastName);
+   res.redirect('/');
  });
  
  //.......for form
