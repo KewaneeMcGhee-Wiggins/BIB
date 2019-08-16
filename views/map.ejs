@@ -4,55 +4,80 @@
 
 <h2>Map of Service Areas</h2>
 
-<div id="map"></div>
+<div id="map" style="width: 500px; height: 400px;"></div>
 
- <script>
+<script>
 
-    var map;
-    function initMap() {
-      var myMarkerLatLng = { lat: 42.2947913, lng: -71.0945975 };
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 42.3736, lng: -71.0861 },
-        zoom: 8,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      });
-
-      var infowindow = new google.maps.InfoWindow();
-
-      var marker, i = new google.maps.Marker({
-        position: myMarkerLatLng,
-        animation: google.maps.Animation.DROP,
-        label: [['Linda E. Carter', 42.3736, -71.0945975, 4],
-        ['Violetta E. Davis', 42.3280544,-71.0929354, 6],
-        ['Mariah S. Carey', 42.268052,-71.1016179, 5],
-        ['Angela I. Bassett', 42.3885906,-71.1179996, 3],
-        ['Beyonce T. Knowles-Carter', 42.3680858,-71.1111345 , 2],
-        ['Kewanee McGhee-Wiggins', 42.3280544,-71.0929354 , 1]
-        ]
-
-    
-});
-      for (i = 0; i < locations.length; i++) {
-        marker = new google.maps.Marker({
-          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-          map: map
-        });
-        google.maps.event.addListener(marker, 'click', (function (marker, i) {
-          return function () {
-            infowindow.setContent(locations[i][0]);
-            infowindow.open(map, marker);
-          }
-        })(marker, i));
-      }
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwFIhCaFlSZy9s8IWDX4p-yeiQmKhs4Uk&callback=initMap" alt="map" class="center";
+  var map;
   
-  async defer></script>
+  function initMap() {
+    var myMarkerLatLng = { lat: 42.2947913, lng: -71.0945975 };
+    var mapDiv = document.getElementById("map");
+    console.log(mapDiv);
+    map = new google.maps.Map(mapDiv, {
+     center: { lat: 42.3736, lng: -71.0861 },
+      zoom: 8,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+  //};
+  //  var map;
+    
+var locations = [
+    {lat: 42.3280544,lng: -71.0929354},
+    {lat: 42.268052,lng: -71.1016179},
+    {lat: 42.3736, lng:-71.0945975},
+    {lat: 42.3885906, lng: -71.1179996},
+    {lat: 42.3680858, lng:-71.1111345},
+    {lat:42.3280544, lng:-71.0929354}
+    ]
 
 
-</body>
+    // Create an array of alphabetical characters used to label the markers.
+    var labels = '123456';
+    var names =['Kewanee McGhee-Wiggins', 'Beyonce T. Knowles-Carter', 'Angela I. Bassett', 'Linda E. Carter', 'Mariah S. Carey',]
 
-<%- include("./partials/footer.ejs") %>
+    // Add some markers to the map.
+    // Note: The code uses the JavaScript Array.prototype.map() method to
+    // create an array of markers based on a given "locations" array.
+    // The map() method here has nothing to do with the Google Maps API.
+    var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+          });
+        });
+
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+         // Add a marker clusterer to manage the markers.
+ // var center = new google.maps.LatLng(42.2947913, -71.0861);
+ //   var options = {
+    //  'zoom': 13,
+    //  'mapTypeId': google.maps.MapTypeId.ROADMAP
+    //};
+}
 
 
+   // var mcOptions = { gridSize: 50, maxZoom: 15, imagePath: 'images/m' };
+    //var markers = [1,2,3,4,5,6]; // Create the markers you want to add and collect them into a array.
+    //var mc = new MarkerClusterer(map, markers, mcOptions);
+
+//  var infowindow = new google.maps.InfoWindow();
+//     new google.maps.event.addListener(marker, 'click', (function (marker, i) {
+//       return function () {
+//         infowindow.setContent(locations[i][0]);
+//         infowindow.open(map, marker);
+//       }
+//     })(marker, i)
+//     );
+
+</script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwFIhCaFlSZy9s8IWDX4p-yeiQmKhs4Uk&callback=initMap"></script> 
+
+
+
+  
+  
+
+  <%- include("./partials/footer.ejs") %>

@@ -53,30 +53,30 @@ app.get('/faQs', (req, res) => {
  
  //.......for form
  // console.log(req.body.firstN)
-  //console.log(req.body.lastN)
+ // console.log(req.body.lastN)
    
-  //let customer = req.body.firstN
+ // let customer = req.body.firstN
   //let number = req.body.lastN
-  //clientObj ={
-    // "firstName": firstName,
+ // clientObj ={
+   //  "firstName": firstName,
     // "lastName": lastName,
     // "birthDate": dob,
     // "clientAddress":clientAddress,
-    // "city":city,
-    // "state":state,
-    // "zip":zip,
-    // "telephone":telephone,
-    // "email":email,
-    // "textarea":textarea
-
+  //    "city":city,
+  //    "state":state,
+  //    "zip":zip,
+  //   "telephone":telephone,
+  //    "email":email,
+  //    "textarea":textarea
+  // }
   
 
 
 
 
-//orders.push(clientObj)
+//orders.push(clientObj),
  
-//res.redirect("/index.ejs");
+//res.redirect("/index.ejs"),
 //req.body.name
 
 
@@ -99,7 +99,7 @@ app.listen(3000, function(){ console.log('Breast Is Best app listening on port 3
 
  
 //function bibMap() {
-  //var btn = document.createElement("BUTTON");// Create a <button> element
+ // var btn = document.createElement("BUTTON");// Create a <button> element
  // btn.innerHTML = "CLICK ME";                   // Insert text
-//  document.body.appendChild(btn);               // Append <button> to <body>
+ // document.body.appendChild(btn);               // Append <button> to <body>
 

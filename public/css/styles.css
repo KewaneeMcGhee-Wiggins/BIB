@@ -12,11 +12,16 @@ h1 {
      font-stretch: expanded;
      -webkit-text-fill-color: darkviolet
  } 
- .center {
+ .centerText {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 25%;
+  }
+  p.info{
+    text-align: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font:bold;
   }
   body{
      background-color: rgb(245, 245, 220);
@@ -60,8 +65,11 @@ form{
 form.btn{
 margin-top: 25px;
 }
-      #map {
-        height: 100%;
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+.map {
+        height: 50%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -69,6 +77,8 @@ margin-top: 25px;
         margin: 0;
         padding: 0;
       }
+      
+      
     
 
 
