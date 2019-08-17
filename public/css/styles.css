@@ -13,10 +13,14 @@ h1 {
      -webkit-text-fill-color: darkviolet
  } 
  .centerText {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
+    display:block;
+     /* margin-left: ;  */
+     /* margin-right:100%;  */
+    width: 100%;
+  }
+  .motherImg{
+    height: 100px;
+    width: 50px;
   }
   body.h1{
     width:25px;
